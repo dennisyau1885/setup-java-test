@@ -1,0 +1,20 @@
+name: setup java test
+
+on:
+  push:
+    branches: [ "main" ]
+
+  # Run on manual action
+  workflow_dispatch:
+
+jobs:
+  test-setup-java:
+    runs-on: [ ubuntu ]
+    steps:
+       - name: Checkout Repo
+         uses: actions/checkout@v2
+       - name: Setup Java
+         uses: actions/setup-java@v3
+         with:
+           distribution: 'microsoft'
+           java-version: '17'
