@@ -9,7 +9,7 @@ on:
 
 jobs:
   test-setup-java:
-    runs-on: [ ubuntu ]
+    runs-on: [ ubuntu-latest ]
     steps:
        - name: Checkout Repo
          uses: actions/checkout@v2
